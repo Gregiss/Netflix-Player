@@ -13,8 +13,10 @@ function player(){
 		'background' : 'back.webp',
 		'mp4': ''
 	};
+	let background = "<div class='bg' style='background-image:url("+ video.background + ");'></div>";
 	let player = "<div class='player' id='player'></div>";
 	$("#root").append(player);
+	$("#root").append(background);
 	let bottom = "<div class='top'><div class='back icon' data-href='back'></div></div><div class='bottom'><div class='progress'><div class='subprogress'><div class='toggle'></div></div></div><span class='time'>1:20</span><div class='play icon' data-href='play'></div><div class='back1 icon' data-href='back1'></div><div class='back2 icon' data-href='back2'></div><div class='volume icon' data-href='volume'></div><div class='help icon' data-href='help'></div><div class='legenda icon' data-href='legenda'></div><div class='screen icon' data-href='full'></div></div>";
 	$("#player").append(bottom);
 	$("#player .progress .subprogress .toggle").mouseover(function(){
