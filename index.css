@@ -169,18 +169,18 @@ svg:hover > path {
 .legenda{
 	background-repeat: no-repeat;
     background-size: auto;
-    background-position: -210px -75px;
+    background-position: -100px -75px;
     position: absolute;
-    right: 14vw;
+    right: 20vw;
     float: right;
 }
 
 .screen{
 	background-repeat: no-repeat;
     background-size: auto;
-    background-position: -100px -75px;
+    background-position: -210px -75px;
     position: absolute;
-    right: 20vw;
+    right: 14vw;
     float: right;
 }
 
