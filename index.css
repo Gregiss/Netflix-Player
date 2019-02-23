@@ -236,11 +236,11 @@ svg:hover > path {
 	position: absolute;
 	right: 13vw;
 	font-size: 1.3vw;
-	bottom: 8.2vw;
+	bottom: 7vw;
 }
 
 #player .bottom{
 	transform: scale(1.05);
 	left: 2.5vw;
-	height: 7.5vw;
+	height: 6vw;
 }

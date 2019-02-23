@@ -15,7 +15,7 @@ function player(){
 	};
 	let player = "<div class='player' id='player'></div>";
 	$("#root").append(player);
-	let bottom = "<div class='top'><div class='back icon'></div></div><div class='bottom'><div class='progress'><div class='subprogress'><div class='toggle'></div></div></div><span class='time'>1:20</span><div class='play icon'></div><div class='back1 icon'></div><div class='back2 icon'></div><div class='volume icon'></div><div class='help icon'></div><div class='legenda icon'></div><div class='screen icon'></div><div id='info'><h1>" + video.name + "</h1></div></div>";
+	let bottom = "<div class='top'><div class='back icon' data-href='back'></div></div><div class='bottom'><div class='progress'><div class='subprogress'><div class='toggle'></div></div></div><span class='time'>1:20</span><div class='play icon' data-href='play'></div><div class='back1 icon' data-href='back1'></div><div class='back2 icon' data-href='back2'></div><div class='volume icon' data-href='volume'></div><div class='help icon' data-href='help'></div><div class='legenda icon' data-href='legenda'></div><div class='screen icon' data-href='full'></div></div>";
 	$("#player").append(bottom);
 	$("#player .progress .subprogress .toggle").mouseover(function(){
 		$(this).css("transform", "scale(1.3)");
@@ -23,6 +23,7 @@ function player(){
 	$("#player .progress .subprogress .toggle").mouseout(function(){
 		$(this).css("transform", "scale(1)");
 	});
+	clicks();
 }
 
 function mount(){
@@ -46,6 +47,14 @@ function mount(){
 	}, 4000);
 }
 
+
+function clicks(){
+	$(".icon").click(function(){
+		let func = $(this).data("href");
+		alert(func);
+	});
+}
+
 function disableselect(e){
 	return false
 	}
@@ -56,4 +65,4 @@ function disableselect(e){
 	if (window.sidebar){
 	document.onmousedown=disableselect
 	document.onclick=reEnable
-	}
+}
