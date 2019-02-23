@@ -43,7 +43,7 @@ function mount(){
 	setTimeout(function(){
 		$("#loading").css("transform", "scale(0)");
 		player();
-	}, 1000);
+	}, 4000);
 }
 
 function disableselect(e){
