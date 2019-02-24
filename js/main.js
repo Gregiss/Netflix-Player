@@ -8,10 +8,11 @@ window.onload = function(){
 }
 
 function player(){
-	let video = {
+	var urlvideo = $("#root").data("video");
+	var video = {
 		'name' : 'The Seven Deadly Sins - Prisioneiros do céu',
 		'background' : 'back.webp',
-		'video': 'https://r3---sn-cg51pauxax-4aoe.googlevideo.com/videoplayback?id=e36327a4892ba083&itag=22&source=blogger&mm=31&mn=sn-cg51pauxax-4aoe&ms=au&mv=m&pl=18&ei=jRpyXNvPOcbpqgWzk6nICw&susc=bl&mime=video/mp4&dur=1420.202&lmt=1550677602672447&mt=1550981682&ip=201.34.158.202&ipbits=0&expire=1551010573&sparams=ip,ipbits,expire,id,itag,source,mm,mn,ms,mv,pl,ei,susc,mime,dur,lmt&signature=6A1E1B1A341F82EF8239803F4AE64015476F390925764CC1FDE833C9A77BF881.8BDE00D05DADA4E4EA1767268C8095F61777CCCFC5FA08330131832FECE885A6&key=us0&cpn=lJXWNgppsi1C4tdT&c=WEB_EMBEDDED_PLAYER&cver=20190221'
+		'video': urlvideo
 	};
 	let background = "<div class='bg' style='background-image:url("+ video.background + ");'><div class='opa'></div></div>";
 	let player = "<div class='player' id='player'></div>";
@@ -44,6 +45,7 @@ function player(){
 }
 
 function mount(){
+	var urlvideo = $("#root").data("video");
 	$('body').bind('copy paste',function(e) {
     e.preventDefault(); return false; 
 	});
@@ -66,6 +68,7 @@ function mount(){
 
 
 function clicks(){
+	var urlvideo = $("#root").data("video");
 	var seekBar = document.getElementById("seek-bar");
 	seekBar.addEventListener("change", function() {
 	  // Calculate the new time
@@ -129,10 +132,11 @@ function disableselect(e){
 }
 
 function watch(){
+	var urlvideo = $("#root").data("video");
 	let video = {
 		'name' : 'The Seven Deadly Sins - Prisioneiros do céu',
 		'background' : 'back.webp',
-		'video': 'https://r3---sn-cg51pauxax-4aoe.googlevideo.com/videoplayback?id=e36327a4892ba083&itag=22&source=blogger&mm=31&mn=sn-cg51pauxax-4aoe&ms=au&mv=m&pl=18&ei=jRpyXNvPOcbpqgWzk6nICw&susc=bl&mime=video/mp4&dur=1420.202&lmt=1550677602672447&mt=1550981682&ip=201.34.158.202&ipbits=0&expire=1551010573&sparams=ip,ipbits,expire,id,itag,source,mm,mn,ms,mv,pl,ei,susc,mime,dur,lmt&signature=6A1E1B1A341F82EF8239803F4AE64015476F390925764CC1FDE833C9A77BF881.8BDE00D05DADA4E4EA1767268C8095F61777CCCFC5FA08330131832FECE885A6&key=us0&cpn=lJXWNgppsi1C4tdT&c=WEB_EMBEDDED_PLAYER&cver=20190221'
+		'video': urlvideo
 	};
 	$(".bg").css("transform", "scale(0)");
 	console.log("Background hidden");
